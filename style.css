@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -17,33 +15,20 @@ h1, h2, h3 {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
     url("https://images.unsplash.com/photo-1504196606672-aef5c9cefc92") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-text {
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 4rem;
-}
-
-.hero p {
-  margin: 15px 0;
-  font-weight: 300;
-}
+.hero-text { color: white; }
 
 .section {
   padding: 80px 20px;
 }
 
-.section.light {
-  background: #ffffff;
-}
+.section.light { background: #fff; }
 
 .narrow {
   max-width: 600px;
@@ -51,13 +36,50 @@ h1, h2, h3 {
   line-height: 1.8;
 }
 
-.details {
+/* Countdown */
+#countdown {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
+#countdown div {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 90px;
+}
+
+#countdown span {
+  font-size: 2rem;
+}
+
+/* Events */
+.events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.event-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.event-card.highlight {
+  border: 2px solid #b89b5e;
+}
+
+.event-card span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -83,13 +105,11 @@ iframe {
 
 .btn {
   display: inline-block;
-  margin-top: 25px;
   padding: 15px 40px;
   border-radius: 30px;
   background: #b89b5e;
   color: white;
   text-decoration: none;
-  letter-spacing: 1px;
 }
 
 footer {
@@ -115,8 +135,8 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  border: none;
   background: #b89b5e;
+  border: none;
   color: white;
   padding: 12px;
   border-radius: 50%;
